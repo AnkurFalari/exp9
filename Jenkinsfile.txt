@@ -6,7 +6,7 @@
         stage('Build docker image') {
             steps {
                 scripts {
-                    bat "docker build -t shubham7211/dock ."
+                    bat "docker build -t ankurmca/dock ."
                 }
             }
         }
@@ -15,7 +15,7 @@
                 scripts {
                     bat "docker rm -f my-app-container || exit 0"
                     
-                    bat "docker run -d --name my-app-container shubham7211/dock"
+                    bat "docker run -d --name my-app-container ankurmca/dock"
                 }
           }
       }
